@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg">
+    
+    <Button
+        android:id="@+id/guide_btn01"
+        android:text="本馆介绍"
+           android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        />
+    
+     <Button
+          android:id="@+id/guide_btn02"
+        android:text="服务项目"
+           android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        />
+     <Button
+          android:id="@+id/guide_btn03"
+        android:text="借阅细则"
+           android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        />
+      <Button
+           android:id="@+id/guide_btn04"
+        android:text="馆藏分布"
+           android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
