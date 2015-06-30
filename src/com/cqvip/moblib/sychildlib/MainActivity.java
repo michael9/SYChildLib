@@ -29,17 +29,17 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		gv = (GridView) findViewById(R.id.main_btns_list);
 		mm = new ArrayList();
-		mm.add(new MainBtnsBean(R.drawable.zn, "Èë¹İÖ¸ÄÏ"));
-		mm.add(new MainBtnsBean(R.drawable.gl, "¿ª¹İÊ±¼ä"));
-		mm.add(new MainBtnsBean(R.drawable.zx, "¹İÄÚ¹«¸æ"));
+		mm.add(new MainBtnsBean(R.drawable.zn, "å…¥é¦†æŒ‡å—"));
+		mm.add(new MainBtnsBean(R.drawable.gl, "å¼€é¦†æ—¶é—´"));
+		mm.add(new MainBtnsBean(R.drawable.zx, "é¦†å†…å…¬å‘Š"));
 
-		mm.add(new MainBtnsBean(R.drawable.yd, "¹İ²Ø²éÑ¯"));
-		mm.add(new MainBtnsBean(R.drawable.cx, "½èÔÄ¹ÜÀí"));
-		mm.add(new MainBtnsBean(R.drawable.zy, "µç×Ó×ÊÔ´"));
+		mm.add(new MainBtnsBean(R.drawable.yd, "é¦†è—æŸ¥è¯¢"));
+		mm.add(new MainBtnsBean(R.drawable.cx, "å€Ÿé˜…ç®¡ç†"));
+		mm.add(new MainBtnsBean(R.drawable.zy, "ç”µå­èµ„æº"));
 
-		// mm.add(new MainBtnsBean(R.drawable.zn,"Èë¹İÖ¸ÄÏ"));
-		// mm.add(new MainBtnsBean(R.drawable.zn,"Èë¹İÖ¸ÄÏ"));
-		// mm.add(new MainBtnsBean(R.drawable.zn,"Èë¹İÖ¸ÄÏ"));
+		// mm.add(new MainBtnsBean(R.drawable.zn,"å…¥é¦†æŒ‡å—"));
+		// mm.add(new MainBtnsBean(R.drawable.zn,"å…¥é¦†æŒ‡å—"));
+		// mm.add(new MainBtnsBean(R.drawable.zn,"å…¥é¦†æŒ‡å—"));
 		localUsers = getSharedPreferences("mobliereader", MODE_PRIVATE);
 		GlobleData.islogin=localUsers.getBoolean("islogin", false);
 		if(GlobleData.islogin)
