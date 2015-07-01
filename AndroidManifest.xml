@@ -50,22 +50,27 @@
         <activity
             android:name=".GuideActivity"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
             />
          <activity
             android:name=".EresGuideActivity"
             android:screenOrientation="portrait"
+             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
              />
           <activity
             android:name=".BookSreachActivity"
             android:screenOrientation="portrait"
+              android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
              />
            <activity
             android:name=".BookDetailActivity"
             android:screenOrientation="portrait"
+               android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
             />
              <activity
             android:name=".BorrowActivity"
             android:screenOrientation="portrait"
+                 android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
             />
              <activity
             android:name=".ActivityDlg"
@@ -76,6 +81,7 @@
         <activity
             android:name=".WebActivity"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
              />
     </application>
 
