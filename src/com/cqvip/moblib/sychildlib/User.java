@@ -4,25 +4,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-/**
- * 用户类，登陆
- * @author luojiang
- *
- */
 public class User extends Result{
 	
-	private String cardno;//卡号
-	private String name;//姓名
-	private String dept;//部门
-	private String cardtype;//卡类型
-	private String email;//邮件地址
-	private String username;//卡号
-	private String userid;//用户id
-	private String readerno;//读者id
-	private String phone;//电话
-	private String mobile;//手机
-	private String updatedate;//更新日期
-	private int vipuserid;//更新日期
+	private String cardno;
+	private String name;
+	private String dept;
+	private String cardtype;
+	private String email;
+	private String username;
+	private String userid;
+	private String readerno;
+	private String phone;
+	private String mobile;
+	private String updatedate;
+	private int vipuserid;
 	
 	
 	

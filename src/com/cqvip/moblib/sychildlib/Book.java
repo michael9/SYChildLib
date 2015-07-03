@@ -18,20 +18,20 @@ public class Book implements Serializable  {
 	 * 
 	 */
 	private static final long serialVersionUID = 6159142206069737907L;
-	private String recordid;//图书id
-	private String isbn;//isbn号
-	private String publisher;//出版社
-	private String publishyear;//出版时间
-	private String title;//书名
-	private String author;//书名	
-	private String callno;//索书号
-	private String classno;//分类号
-	private String cover_path;//封面图片
-	private String cover_path_big;//封面图片
-	private String subject;//关键字
-	private String u_page;//页数
-	private String u_price;//价格
-	private String u_abstract;//简介
+	private String recordid;
+	private String isbn;
+	private String publisher;
+	private String publishyear;
+	private String title;
+	private String author;
+	private String callno;
+	private String classno;
+	private String cover_path;
+	private String cover_path_big;
+	private String subject;
+	private String u_page;
+	private String u_price;
+	private String u_abstract;
 	private boolean isfavorite;
 
 	
@@ -39,7 +39,7 @@ public class Book implements Serializable  {
 		return cover_path;
 	}
 
-	//Favorite转换为Book
+	//Favorite转锟斤拷为Book
 	public Book(String recordid, String publisher, String title, String author,
 			String callno, String subject, String u_price,String u_abstract,String imageurl) {
 		this.recordid = recordid;
@@ -52,7 +52,7 @@ public class Book implements Serializable  {
 		this.u_abstract=u_abstract;
 		this.cover_path=imageurl;
 	}
-	//Favorite转换为Book
+	//Favorite转锟斤拷为Book
 	public Book(String recordid, String publisher, String title, String author,
 			String callno,String u_abstract,
 			String imageurl,String pulishyear,String page,String classno,String subject) {
@@ -140,7 +140,7 @@ public class Book implements Serializable  {
 		return u_abstract;
 	}
 	/**
-	 * 搜索返回记录数
+	 * 锟斤拷锟斤拷锟斤拷锟截硷拷录锟斤拷
 	 * @param result
 	 * @return
 	 * @throws BookException

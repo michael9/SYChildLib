@@ -46,7 +46,7 @@ public class BorrowActivity extends Activity {
 		listview = (ListView)findViewById(R.id.borrow_list);
 		noborrow_rl = (RelativeLayout) findViewById(R.id.noborrow_rl);
 		borrow_readername=(TextView)findViewById(R.id.borrow_readername);
-		borrow_readername.setText("¶ÁÕß:"+GlobleData.readername);
+		borrow_readername.setText("è¯»è€…:"+GlobleData.readername);
 		borrow_logout=(Button)findViewById(R.id.borrow_logout);
 		borrow_logout.setOnClickListener(new OnClickListener() {
 			
@@ -76,7 +76,7 @@ public class BorrowActivity extends Activity {
 	 
 
 	  /**
-	   * Ðø½è³É¹¦»Øµ÷
+	   * ï¿½ï¿½ï¿½É¹ï¿½ï¿½Øµï¿½
 	   * @return
 	   */
  	  private Response.Listener<String> cl_renew = new Response.Listener<String>() {

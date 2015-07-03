@@ -43,7 +43,6 @@ public class ActivityDlg extends Activity  {
 	private CustomProgressDialog customProgressDialog;
 	private RequestQueue mQueue;
 	private ErrorListener el;
-	//保存用户名
 	private Editor editor;
 	private SharedPreferences localUsers;
 	@Override
@@ -58,7 +57,6 @@ public class ActivityDlg extends Activity  {
 		msg_box_layout.setVisibility(View.GONE);
 		login_layout.setVisibility(View.GONE);
 		customProgressDialog = CustomProgressDialog.createDialog(this);
-		//customProgressDialog.setMessage("正在加载中...");
 //		login_status_ll.setVisibility(View.GONE);
 	
 		switch (getIntent().getIntExtra("ACTIONID", 0)) {
@@ -170,8 +168,7 @@ public class ActivityDlg extends Activity  {
 //						"0441200001098", "0440061012345" });
 //		log_in_username.setThreshold(0);
 //		log_in_username.setAdapter(adapter);
-//		// 初始化 service
-//		// 检查网络是否可用
+
 //		if (Tool.checkNetWork(this)) {
 //			if (!ManagerService.isrun) {
 //				ManagerService.isrun = true;

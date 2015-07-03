@@ -17,10 +17,10 @@ import android.util.Log;
  */
 public class ShortBook {
 
-	private String sucesss;//³É¹¦Ê§°Ü
-	private String id;//×Ö¶Î1
-	private String date;//×Ö¶Î2
-	private String message;//ÌáÊ¾ÐÅÏ¢
+	private String sucesss;
+	private String id;
+	private String date;
+	private String message;
 	
 	public ShortBook(int type,String result) throws BookException{
 		switch(type){
@@ -78,7 +78,7 @@ public class ShortBook {
 				id = json.getString("id");
 				message = json.getString("title");
 				date = json.getString("imgurl_s");//Ð¡Í¼Æ¬
-				sucesss = json.getString("imgurl");//´óÍ¼Æ¬
+				sucesss = json.getString("imgurl");//ï¿½ï¿½Í¼Æ¬
 			} catch (JSONException e) {
 				throw new BookException(e);
 			}
@@ -89,7 +89,7 @@ public class ShortBook {
 				JSONObject json = new JSONObject(result);
 				message = json.getString("title");
 				id = json.getString("contents");//Ð¡Í¼Æ¬
-				sucesss = json.getString("imgurl");//´óÍ¼Æ¬
+				sucesss = json.getString("imgurl");//ï¿½ï¿½Í¼Æ¬
 			} catch (JSONException e) {
 				throw new BookException(e);
 			}

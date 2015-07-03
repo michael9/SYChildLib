@@ -78,7 +78,7 @@ public class BookSreachActivity extends Activity {
 //									.getString(R.string.tips_nosearch_key));
 //					return;
 //				}
-//				// 判断是否是isbn号查询
+
 				customProgressDialog.show();
 				page = 1;
 				getHomePage(key, GETFIRSTPAGE, DEFAULT_COUNT, GETFIRSTPAGE,
@@ -96,13 +96,13 @@ public class BookSreachActivity extends Activity {
 				 return true;
 				 }
 				 key = edit.getText().toString().trim();
-				 // 隐藏键盘
+
 				 hideKeybord();
-				 // 检查0网络
+
 				 if (!Tool.checkNetWork(context)) {
 				 return false;
 				 }
-				 // 网络访问,获取首页
+
 				 customProgressDialog.show();
 				 page = 1;
 				 getHomePage(key, page, DEFAULT_COUNT, GETFIRSTPAGE,
@@ -136,22 +136,14 @@ public class BookSreachActivity extends Activity {
 			}
 		});
 	}
-	/**
-	 * 隐藏键盘
-	 */
+
 	private void hideKeybord() {
 		InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		if (imm.isActive()) {
 			imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
 		}
 	}
-	/**
-	 * 请求网络，获取数据
-	 * 
-	 * @param key
-	 * @param page
-	 * @param count
-	 */
+
 	private void getHomePage(String key, int page, int count, int type,
 			String field) {
 		gparams = new HashMap<String, String>();
@@ -184,11 +176,11 @@ public class BookSreachActivity extends Activity {
 				customProgressDialog.dismiss();
 			hideKeybord();
 			try {
-				// 获取返回记录数
+
 				int count = Book.bookCount(response);
 //				if (count > 0) {
 //					ll_total_esearch.setVisibility(View.VISIBLE);
-//					searchCount.setText("共计搜索到" + count + "条记录");
+
 //				} else {
 //					ll_total_esearch.setVisibility(View.GONE);
 //				}

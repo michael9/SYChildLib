@@ -1,8 +1,6 @@
 package com.cqvip.moblib.sychildlib;
 
-/**
- * ½á¹ûÀà
- */
+
 import org.json.JSONException;
 import org.json.JSONObject;
 

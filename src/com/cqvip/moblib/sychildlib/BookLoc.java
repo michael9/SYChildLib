@@ -11,19 +11,19 @@ import android.util.Log;
 
 
 /**
- * Êé¼®¹Ý²ØÐÅÏ¢
+ * ï¿½é¼®ï¿½Ý²ï¿½ï¿½ï¿½Ï¢
  * @author luojiang
  *
  */
 public class BookLoc {
 
 	
-	private String barcode;//ÌõÂëºÅ
-	private String callno;//Ë÷ÊéºÅ
-	private String local;//Î»ÖÃ
-	private String status;//×´Ì¬
-	private String volume;//ÆÚ¾í
-	private String cirtype;//ÀàÐÍ
+	private String barcode;
+	private String callno;
+	private String local;
+	private String status;
+	private String volume;
+	private String cirtype;
 	
 	public BookLoc(JSONObject json) throws BookException{
 		try {
@@ -44,7 +44,7 @@ public class BookLoc {
     public static List<BookLoc> formList(String result) throws BookException{
 		
 		
-	    List<BookLoc> books = null;
+	    List<BookLoc> books;
 	try {
 		JSONObject js = new JSONObject(result);
 	     if(!js.getBoolean("success")){

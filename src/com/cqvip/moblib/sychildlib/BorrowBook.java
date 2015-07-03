@@ -10,17 +10,17 @@ import org.json.JSONObject;
 
 public class BorrowBook{
 
-    private String recordno;//记录编号
+    private String recordno;
 	public void setReturndate(String returndate) {
 		this.returndate = returndate;
 	}
 
 	private String barcode;
-	private String title;//标题
-	private String callno;//取书号
+	private String title;
+	private String callno;
 	private String volumeno;
-	private String loandate;//借阅日期
-	private String returndate;//归还
+	private String loandate;
+	private String returndate;
 	//private int loannum;
 
 	private int renew;
@@ -28,8 +28,8 @@ public class BorrowBook{
 		return renew;
 	}
 
-	private String local;//地址
-	private String cirtype;//图书馆分类
+	private String local;
+	private String cirtype;
 	private String price;
 	private String servicetype;
 	
