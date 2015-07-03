@@ -75,10 +75,7 @@ public class BorrowActivity extends Activity {
 	}
 	 
 
-	  /**
-	   * ���ɹ��ص�
-	   * @return
-	   */
+
  	  private Response.Listener<String> cl_renew = new Response.Listener<String>() {
 	          @Override
 	          public void onResponse(String response) {

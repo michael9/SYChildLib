@@ -60,6 +60,7 @@ public class MainActivity extends Activity {
 				case 0:
 					intent.setClass(MainActivity.this, GuideActivity.class);
 					MainActivity.this.startActivity(intent);
+					overridePendingTransition(R.anim.in_from_right,R.anim.out_to_left);
 					break;
 				case 1:
 					intent.setClass(MainActivity.this, WebActivity.class);
@@ -106,6 +107,12 @@ public class MainActivity extends Activity {
 		// gf=(GIFView)findViewById(R.id.gif);
 		// gf.setMovieResource(R.drawable.g001);
 		// gf.setScaleY(3);
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		overridePendingTransition(R.anim.out_to_left,R.anim.in_from_right);
 	}
 
 	@Override
