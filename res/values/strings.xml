@@ -42,4 +42,5 @@
     <string name="beginrenew">开始续借</string>
     <string name="item_price">价格：</string>
      <string name="no_borrow">您没有借阅书籍信息!</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
 </resources>

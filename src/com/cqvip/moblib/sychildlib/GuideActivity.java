@@ -3,6 +3,7 @@ package com.cqvip.moblib.sychildlib;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -66,6 +67,17 @@ public class GuideActivity extends Activity {
 		guide_btn02.setOnClickListener(btnclick);
 		guide_btn03.setOnClickListener(btnclick);
 		guide_btn04.setOnClickListener(btnclick);
+
+
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			finish();
+			overridePendingTransition(R.anim.scale_s_in,R.anim.scale_s_out);
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 	@Override
@@ -89,18 +101,22 @@ public class GuideActivity extends Activity {
 			case R.id.guide_btn01:
 				intent.putExtra("urlstr", "http://weixin.mobcld.com/webcld/syse/htmls/syser_bgjj.html");
 				GuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 			case R.id.guide_btn02:
 				intent.putExtra("urlstr", "http://weixin.mobcld.com/webcld/syse/htmls/syser_fwxm.html");
 				GuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 			case R.id.guide_btn03:
 				intent.putExtra("urlstr", "http://weixin.mobcld.com/webcld/syse/htmls/syser_jyxz.html");
 				GuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 			case R.id.guide_btn04:
 				intent.putExtra("urlstr", "http://weixin.mobcld.com/webcld/syse/htmls/syser_gcfb.html");
 				GuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 
 			default:

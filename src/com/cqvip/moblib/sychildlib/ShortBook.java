@@ -31,8 +31,8 @@ public class ShortBook {
 				if(sucesss.equalsIgnoreCase("true")){
 				JSONObject json = js.getJSONObject("renewinfo");
 				id = json.getString("barcode");
-				date = json.getString("returndate");
-				message = json.getString("returnmessage");
+				date = json.getString("eventtime");
+				message = json.getString("message");
 				}else{
 				  message = js.getString("message");
 				}

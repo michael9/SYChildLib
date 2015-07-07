@@ -137,6 +137,15 @@ public class BookSreachActivity extends Activity {
 		});
 	}
 
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			finish();
+			overridePendingTransition(R.anim.scale_s_in,R.anim.scale_s_out);
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
 	private void hideKeybord() {
 		InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 		if (imm.isActive()) {

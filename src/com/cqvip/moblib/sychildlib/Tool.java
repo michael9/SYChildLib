@@ -83,6 +83,11 @@ public class Tool {
 		return result;
 	}
 
+	/**
+	 * 返回 时间样式 ：几小时前
+	 * @param date
+	 * @return
+	 */
 	public static String GetTime(Date date){
 		long   lSubTime = 0;
 		String strTime = "";
@@ -93,9 +98,9 @@ public class Tool {
 			lSubTime = 1;
 		}
 		if(lSubTime < 60){
-			strTime = "" + lSubTime + "����ǰ";
+			strTime = "" + lSubTime + "分钟前";
 		}else if(lSubTime >= 60 && lSubTime < (24*60)){
-			strTime = "" + lSubTime/60 + "Сʱǰ";
+			strTime = "" + lSubTime/60 + "小时前";
 		}else{
 			try {
 				SimpleDateFormat df = (SimpleDateFormat) new SimpleDateFormat(
@@ -118,7 +123,7 @@ public class Tool {
 
 			String sdStatus = Environment.getExternalStorageState();
 			 if(!sdStatus.equals(Environment.MEDIA_MOUNTED)){
-				Tool.ShowMessages(context, "û���ҵ�SD��");
+				Tool.ShowMessages(context, "没有找到SD卡");
 				 return false;
 			 }
 			 return true;

@@ -16,6 +16,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -73,7 +74,15 @@ public class BorrowActivity extends Activity {
 					+ "/library/user/borrowlist.aspx", borrowlist_ls,
 					Method.POST);
 	}
-	 
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			finish();
+			overridePendingTransition(R.anim.scale_s_in,R.anim.scale_s_out);
+		}
+		return super.onKeyDown(keyCode, event);
+	}
 
 
  	  private Response.Listener<String> cl_renew = new Response.Listener<String>() {
@@ -110,7 +119,8 @@ public class BorrowActivity extends Activity {
 				if(customProgressDialog!=null&&customProgressDialog.isShowing())
 				customProgressDialog.dismiss();
 				try {
-					List<BorrowBook>lists = BorrowBook.formList(response);
+//					List<BorrowBook>lists = BorrowBook.formList(response);
+					lists = BorrowBook.formList(response);
 					if(lists==null||lists.isEmpty()){
 						listview.setVisibility(View.GONE);
 						noborrow_rl.setVisibility(View.VISIBLE);

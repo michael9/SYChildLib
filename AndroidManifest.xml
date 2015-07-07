@@ -31,9 +31,11 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo1"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -50,39 +52,37 @@
         <activity
             android:name=".GuideActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
-            />
-         <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" />
+        <activity
             android:name=".EresGuideActivity"
             android:screenOrientation="portrait"
-             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
-             />
-          <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" />
+        <activity
             android:name=".BookSreachActivity"
             android:screenOrientation="portrait"
-              android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
-             />
-           <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" />
+        <activity
             android:name=".BookDetailActivity"
             android:screenOrientation="portrait"
-               android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
-            />
-             <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" />
+        <activity
             android:name=".BorrowActivity"
             android:screenOrientation="portrait"
-                 android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
-            />
-             <activity
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" />
+        <activity
             android:name=".ActivityDlg"
             android:screenOrientation="portrait"
-             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:windowSoftInputMode="adjustPan" 
-            />
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".WebActivity"
             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen" />
+        <activity
+            android:name=".WelcomeActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen"
-             />
+            android:label="@string/title_activity_welcome" >
+        </activity>
     </application>
 
 </manifest>

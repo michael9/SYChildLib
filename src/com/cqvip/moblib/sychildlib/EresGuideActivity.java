@@ -3,6 +3,7 @@ package com.cqvip.moblib.sychildlib;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
@@ -60,6 +61,15 @@ public class EresGuideActivity extends Activity {
 		eres_guide_btn03.setAnimation(am03);
 	}
 
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			finish();
+			overridePendingTransition(R.anim.scale_s_in,R.anim.scale_s_out);
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
 	OnClickListener btnclick = new OnClickListener() {
 
 		@Override
@@ -71,14 +81,17 @@ public class EresGuideActivity extends Activity {
 			case R.id.eres_guide_btn01:
 				intent.putExtra("urlstr", "http://shaoer.wz.waplexiang.net");
 				EresGuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 			case R.id.eres_guide_btn02:
 				intent.putExtra("urlstr", "http://r.apabi.com/r2k/wx/b/cl/swhy");
 				EresGuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 			case R.id.eres_guide_btn03:
 				intent.putExtra("urlstr", "http://r.apabi.com/r2k/wx/p/pl/swhy");
 				EresGuideActivity.this.startActivity(intent);
+				overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 				break;
 			
 

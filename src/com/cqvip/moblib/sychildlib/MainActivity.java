@@ -23,10 +23,13 @@ public class MainActivity extends Activity {
 	private GridView gv;
 	private SharedPreferences localUsers;
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+
 		gv = (GridView) findViewById(R.id.main_btns_list);
 		mm = new ArrayList();
 		mm.add(new MainBtnsBean(R.drawable.zn, "入馆指南"));
@@ -60,30 +63,34 @@ public class MainActivity extends Activity {
 				case 0:
 					intent.setClass(MainActivity.this, GuideActivity.class);
 					MainActivity.this.startActivity(intent);
-					overridePendingTransition(R.anim.in_from_right,R.anim.out_to_left);
+					overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 					break;
 				case 1:
 					intent.setClass(MainActivity.this, WebActivity.class);
 					intent.putExtra("urlstr",
 							"http://weixin.mobcld.com/webcld/syse/htmls/syser_kfsj.html");
 					MainActivity.this.startActivity(intent);
+					overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 					break;
 				case 2:
 					intent.setClass(MainActivity.this, WebActivity.class);
 					intent.putExtra("urlstr",
-							"http://weixin.mobcld.com/webcld/syse/htmls/syser_newslist.html");
+							"http://weixin.mobcld.com/webcld/syse/htmls/syser_newslist.php");
 					MainActivity.this.startActivity(intent);
+					overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 					break;
 					
 				case 3:
 					intent.setClass(MainActivity.this, BookSreachActivity.class);
 					MainActivity.this.startActivity(intent);
+					overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 					break;
 				case 4:
 					if(GlobleData.islogin)
 					{
 						intent.setClass(MainActivity.this, BorrowActivity.class);
 						MainActivity.this.startActivity(intent);
+						overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 					}else
 					{
 					intent.setClass(MainActivity.this, ActivityDlg.class);
@@ -94,6 +101,7 @@ public class MainActivity extends Activity {
 				case 5:
 					intent.setClass(MainActivity.this, EresGuideActivity.class);
 					MainActivity.this.startActivity(intent);
+					overridePendingTransition(R.anim.scale_b_in,R.anim.scale_b_out);
 					break;
 
 
@@ -107,7 +115,12 @@ public class MainActivity extends Activity {
 		// gf=(GIFView)findViewById(R.id.gif);
 		// gf.setMovieResource(R.drawable.g001);
 		// gf.setScaleY(3);
+
+		Intent intent2=new Intent(MainActivity.this,WelcomeActivity.class);
+		MainActivity.this.startActivity(intent2);
 	}
+
+
 
 	@Override
 	protected void onDestroy() {

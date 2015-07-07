@@ -2,6 +2,7 @@ package com.cqvip.moblib.sychildlib;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -29,6 +30,15 @@ public class WebActivity extends Activity{
 		web01.loadUrl(getIntent().getStringExtra("urlstr"));
       WebSettings webSettings = web01.getSettings();
       webSettings.setJavaScriptEnabled(true);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			finish();
+			overridePendingTransition(R.anim.scale_s_in,R.anim.scale_s_out);
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 }

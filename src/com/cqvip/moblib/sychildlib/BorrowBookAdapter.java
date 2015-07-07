@@ -127,18 +127,19 @@ public class BorrowBookAdapter extends BaseAdapter{
 						
 						@Override
 						public void onClick(View v) {
-							//�����������
+							//发送续借请求
 							int p=(Integer)v.getTag();
-							if(lists.get(p).getRenew()==0){								
-						   //���
+							if(lists.get(p).getRenew()==0){
+							//续借
 						    StringRequest myReq = new StringRequest(Method.POST,GlobleData.SERVER_URL+"/library/user/renew.aspx",
                                          createRenewSuccessListener,
                                          createMyReqErrorListener) {
 							     protected Map<String, String> getParams() throws com.android.volley.AuthFailureError {
 							         Map<String, String> params = new HashMap<String, String>();
-							         params.put("userind", GlobleData.readerid);
+							         params.put("userid", GlobleData.userid);
 							         params.put("barcode", book.getBarcode());
-							         Log.i("mobile",GlobleData.readerid+","+book.getBarcode());
+									 params.put("libid", GlobleData.LIBIRY_ID);
+//							         Log.i("mobile",GlobleData.readerid+","+book.getBarcode());
 							         return params;
 							     }; 
 							 };
@@ -150,7 +151,7 @@ public class BorrowBookAdapter extends BaseAdapter{
 							{
 								Intent intent=new Intent(context, ActivityDlg.class);
 								intent.putExtra("ACTIONID", 0);
-								intent.putExtra("MSGBODY", "�ñ�ͼ���Ѿ������ˡ�\r\n��ע�⵽�ڹ黹��\r\nлл��");
+								intent.putExtra("MSGBODY", "该本图书已经续借过了。\\r\\n请注意到期归还。\\r\\n谢谢！");
 								intent.putExtra("BTN_CANCEL", 0);
 								context.startActivity(intent);
 							}
